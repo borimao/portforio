@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script>
+    <script type="text/javascript" src="/javascripts/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="nav_area">
+      <div>
+          <ul>
+              <li><div class="link_action" id="1"><a href="javascript:void(0);" onclick="SelectLink(1);"></a><p>TOP</p></div></li>
+              <li><div class="link_button" id="2"><a href="javascript:void(0);" onclick="SelectLink(2);"></a><p>MAKES</p></div></li>
+              <li><div class="link_button" id="3"><a href="javascript:void(0);" onclick="SelectLink(3);"></a><p>SKILL</p></div></li>
+              <li><div class="link_button" id="4"><a href="javascript:void(0);" onclick="SelectLink(4);"></a><p>ABOUT</p></div></li>
+          </ul>
+      </div>
+    </div>
+    <div class="main_area">
+      <div class="contents 1 top">
+        <h1 class="open_h" id="h1">P R O F I L E</h1>
+        <div class="profile">
+          <div class="icon_area">
+              <img class="icon" src="/images/アイコン.jpg"/>
+          </div>
+          <div class="name_area">
+            <p>神奈川工科大学 <br class="kai">情報工学部 情報工学科</p>
+            <p>新 堀　真 雄</p>
+            <p>Nibori Mao</p>
+          </div>
+          <p>大学2年の授業でwebに興味を持ち、そこからwebにはまる。フロント、バックエンド、どっちも楽しい。研究室ではjavascript中心にwebアプリケーション開発などやっております。趣味でバイクに乗ったりしています。</p>
+        </div>
+      </div>
+
+      <div class="contents 2 makes">
+        <h1 class="open_h close_h" id="h2">W A K E S</h1>
+        <ul>
+          <li>
+              <div class="make make1">
+                <div class="image_area">
+                    <img class="img" src="/images/スクショ6.png"/>
+                    <img class="img img2" src="/images/スクショ3.png"/>
+                </div>
+                <div class="description">
+                  <h1>カスタムブックマーク</h1>
+                  <span>React / Redux / ReactColor / ReactTransitionGroup / WebStorageAPI</span>
+                  <p>
+                    reactの学修をした際に作成した、好みの色や画像でカスタムできるブックマークページです。
+                    リンクをすべて丸にすることで、ばらばらの画像を使っても統一感が出るようにしたつもりです。
+                  </p>
+                  <a class="link" href="https://github.com/borimao" target="_blank">GitHub</a>
+                </div>
+              </div>
+          </li>
+          <li>
+              <div class="make make2">
+                <div class="image_area">
+                    <img class="img" src="/images/お絵描き4.PNG"/>
+                    <img class="img img2" src="/images/お絵描き5.PNG"/>
+                </div>
+                <div class="description">
+                  <h1>絵をスタンプ化できる<br>お絵描きチャット</h1>
+                  <span>express / socket io / canvas / MySQL</span>
+                  <p>
+                    友人とのやり取りでスタンプを使いたいとき、ちょうどいいのがなければその場で書ければいいのにと思い、研究室の自由課題で作成しました。他人が書いた絵も保存＆手直しできます。
+                  </p>
+                  <a class="link" href="https://github.com/borimao" target="_blank">GitHub</a>
+                </div>
+              </div>
+          </li>
+          <li>
+              <div class="make make3">
+                <div class="image_area">
+                    <img class="img" src="/images/ハッカソン１.PNG"/>
+                    <img class="img img2" src="/images/ハッカソン2.PNG"/>
+                </div>
+                <div class="description">
+                  <h1>電車内<br>コミュニケーション<br>アプリ 「 <span style="color:greenyellow">T-con</span> 」</h1>
+                  <span>express / socket io / GeolocationAPI / PostgreSQL</span>
+                  <p>
+                    システムを担当しました。yahoo主催「HACKU」受賞作品です。電車で座りたいとき降りる人がわかればいいのにというチームメンバーのアイデアから制作しました。同じ電車に乗っている人とコミュニケーションが取れるwebアプリです。
+                  </p>
+                  <a class="link" href="https://youtu.be/W23VUkWcKiI?t=2652" target="_blank">詳しく</a><a class="link" href="https://github.com/borimao" target="_blank">GitHub</a>
+                </div>
+              </div>
+          </li>
+        </ul>
+        
+      </div>
+      <div class="contents 3 skills">
+        <h1 class="open_h close_h" id="h3">S K I L L</h1>
+        <div class="skill">
+          <div class="skill_description">
+            <h1>JS(ES6)/HTML/CSS</h1>
+            <p>私が一番使っている言語達です。自主的なアプリケーション開発、研究室の課題や授業課題でも使っています。基本的なことはもちろん、フレームワークもいくつか使っています。</p>
+          </div>
+          <div class="skill_select">
+            <a href="javascript:void(0);" onclick="SetSkill(1)" class="skill_link forkus" id="skill1">JavaScript/HTML/CSS</a>
+            <a href="javascript:void(0);" onclick="SetSkill(2)" class="skill_link" id="skill2">React/Redux</a>
+            <a href="javascript:void(0);" onclick="SetSkill(3)" class="skill_link" id="skill3">jQuery</a>
+            <a href="javascript:void(0);" onclick="SetSkill(4)" class="skill_link" id="skill4">Node.js/Express.js</a>
+            <a href="javascript:void(0);" onclick="SetSkill(5)" class="skill_link" id="skill5">Ruby on Rails</a>
+            <a href="javascript:void(0);" onclick="SetSkill(6)" class="skill_link" id="skill6">PHP</a>
+            <a href="javascript:void(0);" onclick="SetSkill(7)" class="skill_link" id="skill7">MySQL</a>
+            <a href="javascript:void(0);" onclick="SetSkill(8)" class="skill_link" id="skill8">PostgreSQL</a>
+            <a href="javascript:void(0);" onclick="SetSkill(9)" class="skill_link" id="skill9">GitHub</a>
+            <a href="javascript:void(0);" onclick="SetSkill(10)" class="skill_link" id="skill10">C/C++/Java</a>
+          </div>
+        </div>
+      </div>
+      <div class="contents 4 abouts">
+        <h1 class="open_h close_h" id="h4">A B O U T</h1>
+        <div class="about">
+              <h1><span>Mail</span><br>maonibori@gmail.com</h1>
+              <h1><span>GitHub</span><br><a href="https://github.com/borimao" target="_blank">https://github.com/borimao</a></h1>
+          
+          
+        </div>
+      </div>
+    </div>
+    <div class="back_area">
+      <img class="back_image1" src="\images\夕日.jpg"/>
+      <img class="back_image2 ghost" src="\images\夜空.jpg"/>
+      <div class="bookmark ghost">
+        <div class="slide1"></div>
+        <div class="slide2"></div>
+        <div class="smoke"></div>
+      </div>
+    </div>
+  </body>
+</html>

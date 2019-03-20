@@ -1,0 +1,611 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif
+}
+html{
+  width: 100%;
+  height: 100%;
+}
+body{
+  width: 100%;
+  height: 100%;
+}
+/*ナビゲーション-----------------------------------------------------------------------------------------------------------------------*/
+.nav_area{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: rgb(49, 49, 49);
+  box-shadow: 2px 2px 5px black;
+  z-index: 2;
+}
+.nav_area > div{
+  position: relative;
+  height: 100%;
+}
+.nav_area ul {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 350px;
+}
+.nav_area > div > ul > li {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 60px 0;
+  width: 100%;
+  position: relative;
+}
+.nav_area > div > ul > li > div > a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  text-indent:-999px;
+  transition: 0.2s;
+}
+.link_button{
+  transition: 0.2s;
+  width: 80%;
+  height: 45px;
+  background-color: rgb(49, 49, 49);
+}
+.link_action{
+  transition: 0.2s;
+  background-color: rgb(255, 255, 255);
+  color: rgb(49, 49, 49);
+  box-shadow: 3px 3px 5px black;
+  margin-left: 30px;
+  width: 100%;
+}
+.link_action > a {
+  display: none;
+}
+.link_button:hover{
+  box-shadow: 3px 3px 5px black;
+}
+.link_button:hover > a{
+  background-color: rgba(255, 255, 255, 0.103);
+}
+
+/*メインエリア----------------------------------------------------------------------------------------*/
+.main_area{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 250px);
+  height: auto;
+  z-index: 1;
+  transition: 0.5s;
+}
+/*共通cssーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.contents{
+  height: 2500px;
+  padding-top: 40px;
+  position: relative;
+}
+.open_h{
+  background-color: rgb(255, 255, 255);
+  width: 700px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 60px;
+  box-shadow: 3px 3px 5px black;
+  overflow: hidden;
+  color: rgba(49, 49, 49, 0.9);
+  transition: 0.4s;
+}
+.close_h{
+  width: 0px;
+}
+.back_area{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 250px);
+  height: 110%;
+  background-color: rgb(255, 255, 255);
+  z-index: 0;
+}
+.back_image1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 110%;
+  width: auto;
+  transition: 0.5s;
+}
+.back_image2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  transition: 0.5s;
+}
+.bookmark{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.slide1 {
+  width: auto;
+	height: 50%; /* 画像の高さを指定 */
+	position: relative;
+	background: url("../images/バナー.png") repeat-x 0 0;
+	background-size: auto 100%;
+	animation: bg-slider1 100s linear infinite; 
+	margin: 0;
+	padding: 0;
+}
+@keyframes bg-slider1 {
+	from { background-position: 0 0; }
+    to { background-position: 5000px 0; } 
+}
+.slide2 {
+  width: auto;
+	height: 50%; /* 画像の高さを指定 */
+	position: relative;
+	background: url("../images/バナー2.png") repeat-x 0 0;
+	background-size: auto 100%;
+	animation: bg-slider2 100s linear infinite; 
+	margin: 0;
+	padding: 0;
+}
+@keyframes bg-slider2 {
+	from { background-position: 0 0; }
+    to { background-position: -5000px 0; } 
+}
+.smoke{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.ghost{
+  opacity: 0;
+}
+/*トップ画面---------------------------------------------------------------------------------------*/
+.top{
+  height: 668px;
+}
+.profile {
+  position: absolute;
+  top: 160px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 745px;
+  height: 450px;
+  background-color: rgba(49, 49, 49, 0.8);
+  box-shadow: 3px 3px 5px black;
+  color: #ffffff
+}
+.icon_area{
+  height: 130px;
+  width: 130px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+.icon{
+  width: 140%;
+}
+.name_area{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.profile > p{
+  width: 70%;
+  margin: auto;
+  word-break: break-all;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.kai{
+  display: none;
+}
+
+/*作品画面--------------------------------------------------------------------------*/
+.makes{
+  height: 1850px;
+}
+.makes > ul {
+  position: absolute;
+  top: 160px;
+  right: 0px;
+  left: 0;
+  margin: 0 auto;
+  width: 744px;
+}
+.makes > ul > li {
+  width: 100%;
+  list-style: none;
+  margin-bottom: 150px;
+}
+.make{
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background-color: rgba(49, 49, 49, 0.75);
+  box-shadow: 3px 3px 5px black;
+}
+.image_area{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 372px;
+  height: 450px;
+}
+.img{
+  width: 350px;
+  box-shadow: 3px 3px 5px black;
+  margin: 20px 10px 0 0;
+}
+.description{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 332px;
+  height: 410px;
+  color: #ffffff;
+  padding: 20px;
+}
+.description > p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.description > span{
+  font-size: 12px;
+}
+.link{
+  text-decoration: none;
+  background-color: #fff;
+  color: #000000;
+  font-weight: bold;
+  padding: 3px 5px 3px 5px;
+  margin-right: 20px;
+  box-shadow: 3px 3px 5px black;
+}
+
+/*スキル-----------------------------------------------------------------------------------*/
+.skills{
+  height: 668px;
+}
+.skill {
+  position: absolute;
+  top: 160px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 745px;
+  height: 450px;
+  box-shadow: 3px 3px 5px black;
+  color: #ffffff;
+  background-color: rgba(49, 49, 49, 0.75);
+}
+.skill_select{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(40% - 40px);
+  height: calc(100% - 40px);
+  
+  padding: 20px 20px;
+}
+.skill_description{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(60% - 82px);
+  height: calc(100% - 62px);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 20px;
+  transition: 0.5s;
+  border: #fff solid 1px;
+}
+.skill_description > h1{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skill_link{
+  display: block;
+  text-decoration: none;
+  border: #fff solid 1px;
+  color: #fff;
+  padding: 2px 5px;
+  font-size: 20px;
+  margin: 0 0 5px 0;
+  transition: 0.3s;
+  font-weight: bold;
+  width: 100%;
+}
+.skill_link:hover{
+  background-color: #fff;
+  color: rgba(49, 49, 49, 0.75);
+}
+.forkus{
+  background-color: #fff;
+  color: rgba(49, 49, 49, 0.75);
+  margin-left: 20px;
+}
+
+/*その他ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.abouts{
+  height: 668px;
+}
+.about{
+  position: absolute;
+  top: 160px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 745px;
+  height: 450px;
+  background-color: rgba(49, 49, 49, 0.8);
+  box-shadow: 3px 3px 5px black;
+  color: #ffffff;
+  padding-top: 50px;
+}
+.about > h1{
+  text-align: center;
+  margin-top: 50px;
+}
+.about > h1 > span{
+  background-color: #fff;
+  color: rgba(49, 49, 49, 0.75);
+  padding: 0 20px;
+  border-radius: 50px;
+}
+.about > h1 > a{
+  color: #fff;
+}
+.about > h1 > a:hover{
+  color: aqua;
+}
+
+@media screen and (max-width: 1024px){ 
+  .nav_area{
+    width: 150px;
+  }
+  .main_area{
+    width: calc(100% - 150px);
+  }
+  .back_area{
+    width: calc(100% - 150px);
+  }
+}
+
+@media screen and (max-width: 930px){
+  .nav_area{
+    display: none;
+  }
+  .main_area{
+    width: 100%;
+  }
+  .back_area{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 770px){
+  .open_h{
+    width: 100%;
+    box-shadow: none;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .smoke{
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  /*トップ------------------------------------------------*/
+  .top{
+    height: auto;
+  }
+  .profile{
+    position: static;
+    top: 0;
+    width: 95%;
+    height: auto;
+    padding: 5px 0;
+    margin-top: 20px;
+    padding: 20px 0 10px 0;
+    margin-bottom: 150px;
+  }
+  .profile > p{
+    width: 95%;
+    font-size: 18px;
+  }
+  .name_area{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  /*ワーク------------------------------------------*/
+  .makes{
+    height: auto;
+  }
+  .makes > ul {
+    position: static;
+    top: 0;
+    right: 0px;
+    left: 0;
+    width: 95%;
+    margin-top: 20px;
+  }
+  .makes > ul > li {
+    width: 100%;
+    list-style: none;
+    margin-bottom: 150px;
+  }
+  .make{
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  .image_area{
+    position: static;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 95%;
+    margin: auto;
+    margin-top: 5px;
+    height: auto;
+  }
+  .img{
+    width: 100%;
+    margin: 10px 0;
+  }
+  .img2{
+    display: none;
+  }
+  .description{
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 95%;
+    height: auto;
+    padding: 0 0 20px 0;
+  }
+  .description > p {
+    font-size: 18px;
+  }
+  .description > span{
+    font-size: 14px;
+  }
+
+
+  /*スキル---------------------------------------*/
+  .skills{
+    height: auto;
+  }
+  .skill {
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 95%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 150px;
+  }
+  .skill_select{
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 95%;
+    height: auto;
+    padding: 0;
+  }
+  .skill_description{
+    position: static;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 95%;
+    height: 250px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    border: #fff solid 1px;
+    
+  }
+  .skill_description > h1{
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+  }
+  .skill_description > p{
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  
+  .skill_link{
+    display: inline-block;
+    text-decoration: none;
+    padding: 2px 10px;
+    font-size: 25px;
+    margin: 0 10px 10px 0;
+    transition: 0.3s;
+    font-weight: bold;
+    width: auto;
+  }
+  .skill_link:hover{
+    background-color: #fff;
+    color: rgba(49, 49, 49, 0.75);
+  }
+  .forkus{
+    background-color: #fff;
+    color: rgba(49, 49, 49, 0.75);
+    margin-left: 0;
+  }
+
+  /*アバウト----------------------------------------------*/
+  .abouts{
+    height: auto;
+  }
+  .about{
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    width: 95%;
+    height: 450px;
+  }
+}
+
+
+@media screen and (max-width: 376px){
+  .kai{
+    display: inline;
+  }
+  .open_h{
+    font-size: 40px;
+  }
+  .description > h1{
+    font-size: 25px;
+  }
+  .skill_description > h1{
+    font-size: 25px;
+  }
+  .skill_link{
+    font-size: 20px;
+  }
+}
